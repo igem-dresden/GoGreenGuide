@@ -12,7 +12,7 @@
 % modified slightly by the iGEM team TU Dresden 2017
 %
 % License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% cc BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 % Compiling this template:
 % This template uses biber for its bibliography and makeindex for its index.
@@ -45,9 +45,9 @@
 
 \documentclass[11pt,fleqn,openany]{book} % Default font size and left-justified equations
 
-%----------------------------------------------------------------------------------------
-
 \input{formatting} % Insert the formatting.tex file which contains the majority of the structure behind the template
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 	
@@ -59,10 +59,11 @@
 	\thispagestyle{empty}
 	\begin{tikzpicture}[remember picture,overlay]
 	\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.jpg}};
-	\draw ([yshift=7cm]current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering GoGreenGuide\\[15pt] % Book title
+	\draw ([yshift=7cm]current page.center) node [fill=ocre!40!white,fill opacity=0.6,text opacity=1,inner sep=2cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering GoGreenGuide\\[15pt] % Book title
 			{\LARGE The Official iGEM goes green Guideline}\\[20pt] % Subtitle
 			{\Large iGEM Team TU Dresden 2017}}}; % Author name
-	\node[inner sep=0pt] (logo) at ([yshift=-10cm]current page.center) {\includegraphics[width=0.35\paperwidth]{goGreenLogo.png}};
+	\fill[ocre!50!white, opacity=0.6] ([yshift=-10cm]current page.center) circle (0.14\paperwidth);
+	\node (logo) at ([yshift=-10cm]current page.center) {\includegraphics[width=0.3\paperwidth]{goGreenLogo.png}};
 	\end{tikzpicture}
 	\vfill
 	\endgroup

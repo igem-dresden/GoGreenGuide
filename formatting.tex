@@ -11,7 +11,7 @@
 % http://www.LaTeXTemplates.com
 %
 % License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% cc BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -42,8 +42,10 @@
 %	FONTS
 %----------------------------------------------------------------------------------------
 
-\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{avant} % Use the Avantgarde font for headings
 %\usepackage{times} % Use the Times font for headings
+\usepackage{uarial}
+\usepackage{bbold}
 \usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
 
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -473,7 +475,8 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \usepackage{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={GoGreenGuide},pdfauthor={iGEM team TU Dresden 2017}}
+% option for underlined links: pdfborderstyle={/S/U/W 1}
 \usepackage{bookmark}
 \bookmarksetup{
 	open,
@@ -487,3 +490,10 @@ innerbottommargin=5pt]{cBox}
 		\fi
 	}
 }
+\usepackage{cleveref}
+
+%----------------------------------------------------------------------------------------
+%	OTHER CUSTOM STYLES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\stress}[1]{\textcolor{ocre}{\textbf{#1}}}
