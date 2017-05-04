@@ -69,19 +69,46 @@
 	\endgroup
 	
 	%----------------------------------------------------------------------------------------
-	%	TABLE OF CONTENTS
+	%	COPYRIGHT PAGE
 	%----------------------------------------------------------------------------------------
 	
+	\newpage
+	~\vfill
+	\thispagestyle{empty}
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[inner sep=0pt, opacity=0.5] (logo) at ([xshift=-5cm,yshift=3.5cm]current page.center) {\includegraphics[width=1.2\paperwidth]{goGreenLogoGrayscale}};
+	\end{tikzpicture}
+	
+
+	\begin{flushright}
+			\noindent {\large\sffamily\textbf{iGEM goes green}}\\\bigskip
+		
+		\noindent \textsc{Put forward by the TU Dresden iGEM team 2017.}\\\bigskip
+		
+		\noindent Opinions, ideas or suggestions? This guide is under ongoing revision during the iGEM year 2017 and we'd love to hear from you! Drop us an email or open an issue on the GoGreenGuide's GitHub page. You are also welcome to follow the iGEM goes green initiative on social media.\\\bigskip
+		
+		\noindent \texttt{\href{mailto:igem2017@mailbox.tu-dresden.de}{igem2017@mailbox.tu-dresden.de}}
+		
+		\noindent \textsc{\url{https://github.com/igem-dresden/GoGreenGuide}}
+		
+		\noindent \textsc{\url{https://www.facebook.com/igem.goesgreen}}
+	\end{flushright}\vspace{-\bigskipamount}
+	%\noindent \textit{First printing, March 2013} % Printing/edition date
+	%----------------------------------------------------------------------------------------
+	%	TABLE OF CONTENTS
+	%----------------------------------------------------------------------------------------
+	%
 	%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
-	
+	%
 	\chapterimage{chapter_head_content.jpg} % Table of contents heading image
-	
+	%
 	\pagestyle{empty} % No headers
-	
+	%
 	\tableofcontents % Print the table of contents itself
-	
+	%
 	\pagestyle{fancy} % Print headers again
-	
+	%
 	%----------------------------------------------------------------------------------------
 	%	CONTENT
 	%----------------------------------------------------------------------------------------
