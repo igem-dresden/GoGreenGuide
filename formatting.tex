@@ -334,6 +334,18 @@ innerbottommargin=5pt]{cBox}
 		\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
 
 %----------------------------------------------------------------------------------------
+%	SUGGEST ENVIRONMENT
+%----------------------------------------------------------------------------------------
+
+\newenvironment{suggest}{\par\vspace{10pt}\bfseries\sffamily % Vertical white space above the remark and boldface
+	\begin{list}{}{
+			\leftmargin=35pt % Indentation on the left
+			\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+		\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+			\node at (-15pt,5pt){\includegraphics[width=.7cm]{leaf}};\end{tikzpicture}} % Orange R in a circle
+		\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+
+%----------------------------------------------------------------------------------------
 %	SECTION NUMBERING IN THE MARGIN
 %----------------------------------------------------------------------------------------
 
