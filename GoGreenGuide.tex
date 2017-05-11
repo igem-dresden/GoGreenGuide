@@ -12,7 +12,7 @@
 % modified slightly by the iGEM team TU Dresden 2017
 %
 % License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% cc BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 % Compiling this template:
 % This template uses biber for its bibliography and makeindex for its index.
@@ -45,9 +45,9 @@
 
 \documentclass[11pt,fleqn,openany]{book} % Default font size and left-justified equations
 
-%----------------------------------------------------------------------------------------
-
 \input{formatting} % Insert the formatting.tex file which contains the majority of the structure behind the template
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 	
@@ -59,28 +59,56 @@
 	\thispagestyle{empty}
 	\begin{tikzpicture}[remember picture,overlay]
 	\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.jpg}};
-	\draw ([yshift=7cm]current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering GoGreenGuide\\[15pt] % Book title
+	\draw ([yshift=7cm]current page.center) node [fill=ocre!40!white,fill opacity=0.6,text opacity=1,inner sep=2cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering GoGreenGuide\\[15pt] % Book title
 			{\LARGE The Official iGEM goes green Guideline}\\[20pt] % Subtitle
 			{\Large iGEM Team TU Dresden 2017}}}; % Author name
-	\node[inner sep=0pt] (logo) at ([yshift=-10cm]current page.center) {\includegraphics[width=0.35\paperwidth]{goGreenLogo.png}};
+	\fill[ocre!50!white, opacity=0.6] ([yshift=-10cm]current page.center) circle (0.14\paperwidth);
+	\node (logo) at ([yshift=-10cm]current page.center) {\includegraphics[width=0.3\paperwidth]{goGreenLogo.png}};
 	\end{tikzpicture}
 	\vfill
 	\endgroup
 	
 	%----------------------------------------------------------------------------------------
-	%	TABLE OF CONTENTS
+	%	COPYRIGHT PAGE
 	%----------------------------------------------------------------------------------------
 	
+	\newpage
+	~\vfill
+	\thispagestyle{empty}
+	
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[inner sep=0pt, opacity=0.5] (logo) at ([xshift=-5cm,yshift=3.5cm]current page.center) {\includegraphics[width=1.2\paperwidth]{goGreenLogoGrayscale}}; %TODO: higher resolution needed!
+	\end{tikzpicture}
+	
+
+	\begin{flushright}
+			\noindent {\large\sffamily\textbf{iGEM goes green}}\\\bigskip
+		
+		\noindent \textsc{Put forward by the TU Dresden iGEM team 2017.}\\\bigskip
+		
+		\noindent Opinions, ideas or suggestions? This guide is under ongoing revision during the iGEM year 2017 and we'd love to hear from you! Drop us an email or open an issue on the GoGreenGuide's GitHub page. You are also welcome to follow the iGEM goes green initiative on social media.\\\bigskip
+		
+		\noindent \texttt{\href{mailto:igem2017@mailbox.tu-dresden.de}{igem2017@mailbox.tu-dresden.de}}
+		
+		\noindent \textsc{\url{https://github.com/igem-dresden/GoGreenGuide}}
+		
+		\noindent \textsc{\url{https://www.facebook.com/igem.goesgreen}}
+	\end{flushright}\vspace{-\bigskipamount}
+	%\noindent \textit{First printing, March 2013} % Printing/edition date
+	%----------------------------------------------------------------------------------------
+	%	TABLE OF CONTENTS
+	%----------------------------------------------------------------------------------------
+	%
 	%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
-	
+	%
 	\chapterimage{chapter_head_content.jpg} % Table of contents heading image
-	
+	%
 	\pagestyle{empty} % No headers
-	
+	%
 	\tableofcontents % Print the table of contents itself
-	
+	%
 	\pagestyle{fancy} % Print headers again
-	
+	%
 	%----------------------------------------------------------------------------------------
 	%	CONTENT
 	%----------------------------------------------------------------------------------------
