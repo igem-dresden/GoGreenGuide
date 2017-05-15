@@ -254,6 +254,11 @@
 
 \RequirePackage[framemethod=default]{mdframed} % Required for creating the theorem, definition, exercise and corollary boxes
 
+% Checklist box
+\newmdenv[linecolor=ocre,
+	backgroundcolor=ocre!2,
+	linewidth=1pt]{checklistbox}
+
 % Theorem box
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
@@ -340,8 +345,30 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \newenvironment{suggest}[1]{%
-	\begin{list}{\begin{tikzpicture}[overlay] \node at (-10pt,5pt){\includegraphics[width=.7cm]{leaf}};\end{tikzpicture}}{}
+	\begin{list}{\begin{tikzpicture}[overlay] \node at (-10pt,5pt){\includegraphics[width=.8cm]{leaf}};\end{tikzpicture}}{}
 		\item {\sffamily\bfseries #1}\\}{\end{list}}
+
+\newcommand{\tickleaf}{%
+	\begin{tikzpicture}[scale=0.12,baseline={(0,0.2)}]
+		\draw [color=ocre] (.25,.25) .. controls (1,2) and (0,6) .. (3.92,4.05)
+		.. controls (4.2,4.4) .. (4.5,4.6)
+		.. controls (4.5,4.55) .. (4.55,4.5)
+		.. controls (4.22,4.3) .. (4,4)
+		.. controls (6,0) and (1.5,1.5) .. cycle;
+	\end{tikzpicture}%
+}
+
+\newcommand{\tickleafticked}{%
+	\begin{tikzpicture}[scale=0.12,baseline={(0,0.2)}]
+	\draw [color=ocre] (.25,.25) .. controls (1,2) and (0,6) .. (3.92,4.05)
+	.. controls (4.2,4.4) .. (4.5,4.6)
+	.. controls (4.5,4.55) .. (4.55,4.5)
+	.. controls (4.22,4.3) .. (4,4)
+	.. controls (6,0) and (1.5,1.5) .. cycle;
+	\draw [line width=1pt] (0.5,3.5) .. controls (1.5,3.1) .. (2,2)
+	.. controls (3.3,4.5) .. (4.3,5.5);
+	\end{tikzpicture}%
+}
 
 %----------------------------------------------------------------------------------------
 %	SECTION NUMBERING IN THE MARGIN
