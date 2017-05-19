@@ -348,6 +348,12 @@ innerbottommargin=5pt]{cBox}
 	\begin{list}{\begin{tikzpicture}[overlay] \node at (-10pt,5pt){\includegraphics[width=.8cm]{leaf}};\end{tikzpicture}}{}
 		\item {\sffamily\bfseries #1}\\}{\end{list}}
 
+\newenvironment{abc}{%
+	\begin{enumerate}
+		\renewcommand{\labelenumi}{\abcleaf{\Alph{enumi}}}
+		\newcommand\suggestion[1]{\item{\bfseries ##1\\}}
+	}{\end{enumerate}}
+
 \newcommand{\tickleaf}{%
 	\begin{tikzpicture}[scale=0.12,baseline={(0,0.2)}]
 		\draw [color=ocre] (.25,.25) .. controls (1,2) and (0,6) .. (3.92,4.05)
@@ -369,6 +375,17 @@ innerbottommargin=5pt]{cBox}
 	.. controls (3.3,4.5) .. (4.3,5.5);
 	\end{tikzpicture}%
 }
+
+\newcommand{\abcleaf}[1]{%
+	\begin{tikzpicture}[scale=0.12,baseline={(0,0.2)}]
+	\draw [color=ocre] (.25,.25) .. controls (1,2) and (0,6) .. (3.92,4.05)
+	.. controls (4.2,4.4) .. (4.5,4.6)
+	.. controls (4.5,4.55) .. (4.55,4.5)
+	.. controls (4.22,4.3) .. (4,4)
+	.. controls (6,0) and (1.5,1.5) .. cycle;
+	\node at (2.5,2.7) {\sffamily\bfseries\textcolor{ocre}{#1}};
+	\end{tikzpicture}}
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION NUMBERING IN THE MARGIN
