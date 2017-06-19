@@ -1,0 +1,14 @@
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture, overlay]
+%	\node[inner sep=0pt] (logo) at ([xshift=5.5cm,yshift=3.5cm]current page.east) {\includegraphics[width=1.2\paperwidth]{goGreenTree.pdf}};
+%	\node (logo) at ([yshift=4cm, xshift=4cm]current page.south west) {\includegraphics[width=0.3\paperwidth]{goGreenLogo.png}};
+%\end{tikzpicture}
+
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+	\fill [ocre] (current page.north west) rectangle (current page.south east);
+	\fill[white] ([xshift=5cm,yshift=4.5cm]current page.east) circle (.7\paperwidth);
+	\node[inner sep=0pt] (logo) at ([xshift=4.5cm,yshift=3.5cm]current page.east) {\includegraphics[width=1.1\paperwidth]{goGreenTree.pdf}};
+	\fill[white] ([yshift=4cm, xshift=4cm]current page.south west) circle (0.14\paperwidth);
+	\node (logo) at ([yshift=4cm, xshift=4cm]current page.south west) {\includegraphics[width=0.3\paperwidth]{goGreenLogo.png}};
+\end{tikzpicture}

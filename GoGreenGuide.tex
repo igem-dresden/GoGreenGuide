@@ -51,22 +51,7 @@
 
 \begin{document}
 	
-	%----------------------------------------------------------------------------------------
-	%	TITLE PAGE
-	%----------------------------------------------------------------------------------------
-	
-	\begingroup
-	\thispagestyle{empty}
-	\begin{tikzpicture}[remember picture,overlay]
-	\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.jpg}};
-	\draw ([yshift=7cm]current page.center) node [fill=ocre!40!white,fill opacity=0.6,text opacity=1,inner sep=2cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering GoGreenGuide\\[15pt] % Book title
-			{\LARGE The Official iGEM goes green Guideline}\\[20pt] % Subtitle
-			{\Large iGEM Team TU Dresden 2017}}}; % Author name
-	\fill[ocre!50!white, opacity=0.6] ([yshift=-10cm]current page.center) circle (0.14\paperwidth);
-	\node (logo) at ([yshift=-10cm]current page.center) {\includegraphics[width=0.3\paperwidth]{goGreenLogo.png}};
-	\end{tikzpicture}
-	\vfill
-	\endgroup
+	%\include{content/Cover}
 	
 	%----------------------------------------------------------------------------------------
 	%	COPYRIGHT PAGE
@@ -95,7 +80,7 @@
 		\noindent \textsc{\url{https://www.facebook.com/igem.goesgreen}}
 		
 		\noindent \textsc{\url{https://www.instagram.com/igem_goes_green}}
-	\end{flushright}\vspace{-\bigskipamount}
+	\end{flushright}\vspace{-4\bigskipamount}
 	%\noindent \textit{First printing, March 2013} % Printing/edition date
 	%----------------------------------------------------------------------------------------
 	%	TABLE OF CONTENTS
@@ -148,5 +133,12 @@
 %	\printindex
 %	
 %	%----------------------------------------------------------------------------------------
-%	
+	
+	\phantomsection
+
+	\include{content/Sponsors}
+
+	\include{content/Backcover}
+	\include{content/Cover}
+
 \end{document}
