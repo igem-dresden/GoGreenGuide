@@ -1,0 +1,17 @@
+\thispagestyle{empty}
+{\newgeometry{right=1.5cm, left=1.5cm}
+	\begin{tikzpicture}[remember picture, overlay]
+	\fill [fill=ocre] ([yshift=-1cm]current page.north west) rectangle (current page.north east);
+	\fill [fill=ocre] ([yshift=1cm]current page.south west) rectangle (current page.south east);
+	\end{tikzpicture}
+\vspace{-0.5cm}
+\Large\sffamily\centering Space for your notes and ideas:\\
+\vspace{2cm	}
+\newcounter{lines}
+\forloop{lines}{0}{\value{lines} < 20}
+	{
+	\bigskip
+	\begin{tikzpicture}
+		\draw[lightgray, loosely dotted] (0,0) -- (15,0);
+	\end{tikzpicture}\\
+	}
